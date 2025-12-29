@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Global */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1d2671, #c33764);
   min-height: 100vh;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  width: 380px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Time box */
+.time-box {
+  background: #f4f6fa;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.time-label {
+  font-size: 14px;
+  color: #777;
+}
+
+.time {
+  margin: 5px 0 0;
+  color: #1d2671;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-group label {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 6px;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #1d2671;
+  box-shadow: 0 0 0 3px rgba(29, 38, 113, 0.15);
+}
+
+/* Preview */
+.preview {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.preview h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.preview p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.preview span {
+  font-weight: 600;
+  color: #1d2671;
 }
